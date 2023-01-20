@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/jpg" href={{ url_for('static', filename='Logo.png')}} alt="Logo creado para S21services"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} {% endblock %} - Portfolio </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <div class="logo"> Winston J. Guzmán </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ url_for('portfolio.index')}}"> Inicio </a>
+                </li>
+                <li>
+                    <a href="#contacto"> Contacto </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+
+
+<div class="footer">
+    <div class="center full-width">
+        <div class="row">
+            <h3> Contactame ;) </h3>
+        </div>
+
+    </div>
+    <div class="center full-width">
+        <div class="row">
+            <p>
+                Puedes seguirme en mis RRSS
+            </p>
+        </div>
+        
+    </div>
+    <div class="center full-width social-links">
+        <div class="row">
+            <a target='_blank' href="https://www.linkedin.com/in/winstonjguzman"><img src="{{ url_for('static', filename='Linkedin.png')}}" class="social" alt="Linkedin de Winston Guzman" width=30></a>
+            <a target='_blank' href="https://www.instagram.com/winstonjgz"><img src="{{ url_for('static', filename='Instagram.jpg')}}" class="social" alt="Instagram de Winston Guzman" width=30></a>
+            <a target='_blank' href="https://github.com/winstonjgz"><img src="{{ url_for('static', filename='Github.png')}}" class="social" alt="Github de Winston Guzman" width=30></a>
+        </div>
+        
+    </div>
+
+    <div class="made-width">
+        <div class="row">
+            <p> Realizado con Python,Flask, CSS y HTML por Winston J. Guzmán | Buenos Aires, Argentina, 2023 </p>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
